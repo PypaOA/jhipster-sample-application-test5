@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="dvd">
+      <h2 data-cy="dvdDetailsHeading"><span>Dvd</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ dvd.id }}</span>
+        </dd>
+        <dt><span>Name</span></dt>
+        <dd>
+          <span>{{ dvd.name }}</span>
+        </dd>
+        <dt><span>Performer</span></dt>
+        <dd>
+          <span>{{ dvd.performer }}</span>
+        </dd>
+        <dt><span>Release Year</span></dt>
+        <dd>
+          <span>{{ dvd.releaseYear }}</span>
+        </dd>
+        <dt><span>Disc Count</span></dt>
+        <dd>
+          <span>{{ dvd.discCount }}</span>
+        </dd>
+        <dt><span>Format</span></dt>
+        <dd>
+          <span>{{ dvd.format }}</span>
+        </dd>
+        <dt><span>Lang</span></dt>
+        <dd>
+          <span>{{ dvd.lang }}</span>
+        </dd>
+        <dt><span>State</span></dt>
+        <dd>
+          <span>{{ dvd.state }}</span>
+        </dd>
+        <dt><span>Added</span></dt>
+        <dd>
+          <span>{{ dvd.added | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/jhipstertest5/dvd', dvd.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20220208142857",
+  "clientRootFolder": "jhipsterTest5",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cd",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "performer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "releaseYear",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discCount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "medium",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "State",
+      "fieldValues": "OK,AWAY,LOST,EXPECTED,UNDEFINED"
+    },
+    {
+      "fieldName": "added",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "jhipsterTest5",
+  "name": "Cd",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
